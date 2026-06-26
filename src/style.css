@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pres-red: #A31C24;
+  --color-pres-dark: #1a1a1a;
+}
+
+body {
+  background-color: var(--color-gray-50);
+  color: var(--color-gray-900);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
