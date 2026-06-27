@@ -13,14 +13,21 @@ const toggleMenu = () => {
   <nav class="bg-white shadow-sm sticky top-0 z-50 border-b-8 border-pres-red">
     <div class="max-w-full mx-auto px-4 lg:px-4">
       <div class="flex justify-between items-center h-18">
-        <div class="flex items-center">
+        <div class="flex flex-1 items-center">
           <RouterLink to="/" class="flex-shrink-0 flex items-center -mb-2">
             <img src="/logo.png" alt="IT Logo" class="h-10 w-auto -mt-2" />
           </RouterLink>
+
+          <button class="hidden sm:flex items-center text-gray-500 hover:text-pres-red px-2 py-1.5 text-sm transition-colors font-medium mt-1 ml-4">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+            Search
+          </button>
         </div>
 
         <!-- Desktop Menu -->
-        <div class="hidden sm:flex sm:items-center sm:space-x-8">
+        <div class="hidden sm:flex flex-1 justify-center items-center sm:space-x-8">
           <RouterLink
             to="/"
             class="text-gray-700 hover:text-pres-red px-3 py-2 rounded-md text-sm font-medium transition-colors"
@@ -47,8 +54,32 @@ const toggleMenu = () => {
           >
         </div>
 
+        <div class="flex-1 flex items-center justify-end space-x-6">
+          <button class="hidden sm:block text-gray-500 hover:text-pres-red transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+            </svg>
+          </button>
+
+          <div class="hidden sm:block h-6 w-px bg-gray-300"></div>
+
+          <button class="hidden sm:block text-gray-500 hover:text-pres-red transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+        </div>
+
+
+
         <!-- Mobile menu button -->
-        <div class="flex items-center sm:hidden">
+        <div class="flex items-center sm:hidden space-x-2">
+          <button class="text-gray-500 hover:text-pres-red p-2 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+
           <button
             @click="toggleMenu"
             type="button"
@@ -129,6 +160,21 @@ const toggleMenu = () => {
           active-class="text-pres-red bg-red-50 border-l-4 border-pres-red"
           >Media</RouterLink
         >
+        <div class="border-t border-gray-200 mt-2 pt-3 px-4 flex items-center space-x-6">
+        
+          <button class="text-gray-500 hover:text-pres-red transition-colors p-1">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+            </svg>
+          </button>
+
+          <button class="text-gray-500 hover:text-pres-red transition-colors p-1">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+          
+        </div>
       </div>
     </div>
   </nav>
