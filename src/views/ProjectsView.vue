@@ -1,15 +1,21 @@
 <script setup lang="ts">
-// Frontend Developer (Project Section): zhel
+// Frontend Developer (Project Section): zhel (my goat keren bgt nih org)
 // Silakan bangun komponen tampilan daftar project angkatan dan integrasi datanya di sini.
+import { useSettings } from "../composables/useSettings";
+const { t } = useSettings();
 </script>
 
 <template>
-  <div class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-50">
-    <div class="text-center">
-      <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">Our Projects</h1>
-      <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
-        
-      </p>
+    <div class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center">
+            <h1
+                class="text-4xl font-extrabold text-gray-900 dark:text-gray-100 tracking-tight sm:text-5xl"
+            >
+                {{ t("projects.title") }}
+            </h1>
+            <p
+                class="mt-4 max-w-2xl text-xl text-gray-500 dark:text-gray-400 mx-auto"
+            ></p>
+        </div>
     </div>
-  </div>
 </template>

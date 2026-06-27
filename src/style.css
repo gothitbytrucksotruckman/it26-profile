@@ -1,8 +1,16 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-pres-blue: #080b4d;
   --color-pres-dark: #1a1a1a;
+}
+
+*,
+*::before,
+*::after {
+  transition: background-color 0.3s ease, color 0.15s ease, border-color 0.2s ease;
 }
 
 body {
@@ -10,6 +18,12 @@ body {
   color: var(--color-gray-900);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+.dark body,
+body.dark {
+  background-color: var(--color-gray-900);
+  color: var(--color-gray-100);
 }
 
 .fade-enter-active,

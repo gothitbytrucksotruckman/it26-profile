@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import { useSettings } from '../composables/useSettings'
+
+const { t } = useSettings()
 </script>
 
 <template>
-  <div class="bg-white">
+  <div class="bg-white dark:bg-gray-900">
     <!-- Hero Section -->
     <div class="relative bg-pres-dark text-white overflow-hidden">
       <div class="absolute inset-0">
@@ -12,20 +15,20 @@ import { RouterLink } from 'vue-router'
       </div>
       <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 flex flex-col items-center text-center">
         <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-white">
-          Information Technology
+          {{ t('home.tagline1') }}
         </h1>
         <p class="mt-6 text-xl max-w-3xl text-white">
-          Batch 2026 • President University
+          {{ t('home.tagline2') }}
         </p>
         <p class="mt-4 text-lg max-w-2xl text-white">
-          Empowering the future through technology, innovation, and leadership. Discover our journey, our projects, and our people.
+          {{ t('home.tagline3') }}
         </p>
         <div class="mt-10 flex space-x-4">
           <RouterLink to="/directory" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-pres-blue hover:bg-blue-900 transition-colors">
-            Meet the Batch
+            {{ t('home.meetBatch') }}
           </RouterLink>
           <RouterLink to="/projects" class="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-pres-dark transition-colors">
-            View Projects
+            {{ t('home.viewProjects') }}
           </RouterLink>
         </div>
       </div>
@@ -34,19 +37,19 @@ import { RouterLink } from 'vue-router'
     <!-- Core Values / Highlights -->
     <div class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
-        <h2 class="text-base font-semibold text-pres-blue tracking-wide uppercase">Our Vision</h2>
-        <p class="mt-1 text-3xl font-extrabold text-gray-900 sm:text-4xl sm:tracking-tight">
-          Shaping the Digital World
+        <h2 class="text-base font-semibold text-pres-blue dark:text-white tracking-wide uppercase">{{ t('home.ourVision') }}</h2>
+        <p class="mt-1 text-3xl font-extrabold text-gray-900 dark:text-gray-100 sm:text-4xl sm:tracking-tight">
+          {{ t('home.shapingDigital') }}
         </p>
-        <p class="max-w-xl mt-5 mx-auto text-xl text-gray-500">
-          We are a community of passionate developers, designers, and engineers dedicated to solving real-world problems.
+        <p class="max-w-xl mt-5 mx-auto text-xl text-gray-500 dark:text-gray-400">
+          {{ t('home.communityDesc') }}
         </p>
       </div>
 
       <div class="mt-16">
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <div class="pt-6">
-            <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+            <div class="flow-root bg-gray-50 dark:bg-gray-800 rounded-lg px-6 pb-8 h-full shadow-sm hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700">
               <div class="-mt-6">
                 <div>
                   <span class="inline-flex items-center justify-center p-3 bg-pres-blue rounded-md shadow-lg">
@@ -55,16 +58,16 @@ import { RouterLink } from 'vue-router'
                     </svg>
                   </span>
                 </div>
-                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Technical Excellence</h3>
-                <p class="mt-5 text-base text-gray-500">
-                  Mastering modern frameworks, algorithms, and software architectures to build robust solutions.
+                <h3 class="mt-8 text-lg font-medium text-gray-900 dark:text-gray-100 tracking-tight">{{ t('home.techExcellence') }}</h3>
+                <p class="mt-5 text-base text-gray-500 dark:text-gray-400">
+                  {{ t('home.techExcellenceDesc') }}
                 </p>
               </div>
             </div>
           </div>
 
           <div class="pt-6">
-            <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+            <div class="flow-root bg-gray-50 dark:bg-gray-800 rounded-lg px-6 pb-8 h-full shadow-sm hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700">
               <div class="-mt-6">
                 <div>
                   <span class="inline-flex items-center justify-center p-3 bg-pres-blue rounded-md shadow-lg">
@@ -73,16 +76,16 @@ import { RouterLink } from 'vue-router'
                     </svg>
                   </span>
                 </div>
-                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Innovation First</h3>
-                <p class="mt-5 text-base text-gray-500">
-                  Pushing boundaries and adopting cutting-edge technologies to stay ahead of the curve.
+                <h3 class="mt-8 text-lg font-medium text-gray-900 dark:text-gray-100 tracking-tight">{{ t('home.innovationFirst') }}</h3>
+                <p class="mt-5 text-base text-gray-500 dark:text-gray-400">
+                  {{ t('home.innovationFirstDesc') }}
                 </p>
               </div>
             </div>
           </div>
 
           <div class="pt-6">
-            <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+            <div class="flow-root bg-gray-50 dark:bg-gray-800 rounded-lg px-6 pb-8 h-full shadow-sm hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700">
               <div class="-mt-6">
                 <div>
                   <span class="inline-flex items-center justify-center p-3 bg-pres-blue rounded-md shadow-lg">
@@ -91,9 +94,9 @@ import { RouterLink } from 'vue-router'
                     </svg>
                   </span>
                 </div>
-                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Strong Community</h3>
-                <p class="mt-5 text-base text-gray-500">
-                  Collaborating, learning together, and building a supportive network that lasts beyond graduation.
+                <h3 class="mt-8 text-lg font-medium text-gray-900 dark:text-gray-100 tracking-tight">{{ t('home.strongCommunity') }}</h3>
+                <p class="mt-5 text-base text-gray-500 dark:text-gray-400">
+                  {{ t('home.strongCommunityDesc') }}
                 </p>
               </div>
             </div>
